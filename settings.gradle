@@ -1,0 +1,4 @@
+rootProject.name = 'mail-english'
+include 'english-advisor-service'
+include 'common'
+
