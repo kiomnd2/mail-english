@@ -6,5 +6,5 @@ import org.springframework.kafka.support.SendResult;
 import java.util.concurrent.CompletableFuture;
 
 public interface KafkaProducer<T> {
-    CompletableFuture<SendResult<String, KafkaMessage<Object>>> sendMessage(String topic, String senderId, T message);
+    CompletableFuture<SendResult<String, KafkaMessage<Object>>> sendMessage(String topic, KafkaMessage<Object> kafkaMessage);
 }

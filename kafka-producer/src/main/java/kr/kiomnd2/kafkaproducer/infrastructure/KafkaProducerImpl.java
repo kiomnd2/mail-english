@@ -18,10 +18,8 @@ public class KafkaProducerImpl<T> implements KafkaProducer<T> {
     private final KafkaTemplate<String, KafkaMessage<Object>> kafkaTemplate;
 
     @Override
-    public CompletableFuture<SendResult<String, KafkaMessage<Object>>> sendMessage(String topic, String senderId, T message) {
-        return kafkaTemplate.send(topic, KafkaMessage.builder()
-                .message(message)
-                .sender(senderId)
-                .build());
+    public CompletableFuture<SendResult<String, KafkaMessage<Object>>> sendMessage(String topic,
+                                                                                   KafkaMessage<Object> kafkaMessage) {
+        return kafkaTemplate.send(topic, kafkaMessage);
     }
 }

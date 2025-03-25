@@ -1,0 +1,8 @@
+bootJar.enabled = true
+jar.enabled = false
+
+
+dependencies {
+    implementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+}

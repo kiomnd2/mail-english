@@ -1,4 +1,4 @@
-package kr.kiomnd2.kafkaproducer.domain.history.model;
+package kr.kiomnd2.kafkaproducer.domain.history;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,12 +23,14 @@ public class KafkaMessageHistory {
 
     private String messageId;
     private KafkaStatus status;
+    private String errorMessage;
     LocalDateTime createAt;
 
     @Builder
-    public KafkaMessageHistory(String messageId, KafkaStatus status, LocalDateTime createAt) {
+    public KafkaMessageHistory(String messageId, KafkaStatus status, String errorMessage) {
         this.messageId = messageId;
         this.status = status;
+        this.errorMessage = errorMessage;
         this.createAt = LocalDateTime.now();
     }
 }
