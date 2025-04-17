@@ -31,7 +31,7 @@ public class KafkaProducerService<T> {
                 log.error("카프카 처리 중 오류", throwable);
                 messageStore.store(KafkaMessageHistory.builder()
                         .messageId(kafkaMessage.getId())
-                        .errorMessage(null)
+                        .errorMessage(throwable.getMessage())
                         .status(KafkaStatus.ERROR)
                         .build());
             }

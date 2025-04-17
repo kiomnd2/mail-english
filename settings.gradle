@@ -2,4 +2,5 @@ rootProject.name = 'mail-english'
 include 'english-advisor-service'
 include 'common'
 include 'kafka-producer'
+include 'english-subscriber'
 

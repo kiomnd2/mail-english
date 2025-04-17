@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/english-advisor-service" />
+            <option value="$PROJECT_DIR$/english-subscriber" />
             <option value="$PROJECT_DIR$/kafka-producer" />
           </set>
         </option>
